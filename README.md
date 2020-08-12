@@ -1,4 +1,5 @@
 # bachata
+A tiny background removal tool
 
 ## Project setup
 ```
