@@ -1,7 +1,11 @@
 {
   "name": "bachata",
   "version": "0.1.0",
-  "private": true,
+  "description": "basic background removal app with electron.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Michael-Liao/bachata.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

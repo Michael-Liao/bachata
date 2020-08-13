@@ -114,7 +114,6 @@ ipcMain.handle('file-selected', async (event, filepath) => {
   return origin;
 });
 
-let prev_proc = null;
 ipcMain.handle('boundary-changed', async (event, sliderObj) => {
   // console.log('load new image'+ FILE_PATH);
   // silhouette.loadImage(FILE_PATH);
@@ -140,9 +139,14 @@ ipcMain.handle('boundary-changed', async (event, sliderObj) => {
   // const success = await bachata.set(sliderObj.name, sliderObj.range[0], sliderObj.range[1]);
   // console.log(success);
 
-  let processed = bachata.result();
-  console.log(processed === prev_proc);
-  prev_proc = processed;
+  // let processed = bachata.result();
+  let processed;
+  try {
+    processed = await bachata.resultAsync();
+  } catch (error) {
+    console.log(error);
+  }
+  
   // return true;
   return processed;
 });
