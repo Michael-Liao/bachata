@@ -2,6 +2,7 @@
   "name": "bachata",
   "version": "0.1.0",
   "description": "basic background removal app with electron.js",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Michael-Liao/bachata.git"
